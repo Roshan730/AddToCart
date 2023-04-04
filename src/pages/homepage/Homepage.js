@@ -5,10 +5,10 @@ import axios from "axios";
 import { Cartcontext } from "../../context/Context";
 
 const Homepage = () => {
-  const [data, setdata] = useState([]);
+  const [data, setData] = useState([]);
   const fetchData = async () => {
     const response = await axios.get("https://fakestoreapi.com/products");
-    setdata(response.data);
+    setData(response.data);
     console.log(data);
   };
   useEffect(() => {
