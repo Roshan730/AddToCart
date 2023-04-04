@@ -37,9 +37,9 @@ const Cart = () => {
                 -
               </button>
             </div>
-            <h2 onClick={() => dispatch({ type: "REMOVE", payload: item })}>
+            <button onClick={() => dispatch({ type: "REMOVE", payload: item })}>
               x
-            </h2>
+            </button>
           </div>
         );
       })}
