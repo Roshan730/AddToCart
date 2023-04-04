@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { Cartcontext } from "../../context/Context";
+import { cartContext } from "../../context/Context";
 import "./Cart.css";
 
 const Cart = () => {
-  const Globalstate = useContext(Cartcontext);
-  const state = Globalstate.state;
-  const dispatch = Globalstate.dispatch;
+  const globalState = useContext(cartContext);
+  const state = globalState.state;
+  const dispatch = globalState.dispatch;
 
   const total = state.reduce((total, item) => {
     return total + item.price * item.quantity;

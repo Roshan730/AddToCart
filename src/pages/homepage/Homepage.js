@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./Homepage.css";
 import axios from "axios";
-import { Cartcontext } from "../../context/Context";
+import { cartContext } from "../../context/Context";
 
 const Homepage = () => {
   const [data, setData] = useState([]);
@@ -14,7 +14,7 @@ const Homepage = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const Globalstate = useContext(Cartcontext);
+  const Globalstate = useContext(cartContext);
   const dispatch = Globalstate.dispatch;
   console.log(Globalstate);
   return (
